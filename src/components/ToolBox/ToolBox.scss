@@ -1,0 +1,86 @@
+.toolbox-container {
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid var(--border-gray);
+    border-radius: 1.25rem;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 15, 0.08);
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+
+    .image-container {
+        width: 4.25rem;
+        aspect-ratio: 1;
+        border-radius: 1rem;
+        background-color: var(--light-bg);
+        background-position: center;
+        background-size: 72%;
+        background-repeat: no-repeat;
+    }
+
+    .text-container {
+        margin-top: 1.5rem;
+
+        .title {
+            font-size: clamp(1.45rem, 1.8vw, 1.8rem);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .sub-title {
+            margin-top: 0.75rem;
+            color: var(--gray-font);
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+    }
+
+    .view-btn {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-top: auto;
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--purple);
+        border-radius: 999px;
+        background-color: transparent;
+        color: var(--purple);
+        font: inherit;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 180ms ease, color 180ms ease;
+
+        .icon { font-size: 1.25rem; }
+    }
+
+    &:hover {
+        transform: translateY(-0.35rem);
+        border-color: var(--lavender);
+        box-shadow: 0 16px 30px rgba(110, 51, 203, 0.16);
+
+        .view-btn {
+            background-color: var(--purple);
+            color: white;
+        }
+    }
+
+    .view-btn:focus-visible {
+        outline: 3px solid var(--lavender);
+        outline-offset: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .toolbox-container {
+        min-height: 19rem;
+        padding: 1.25rem;
+
+        .image-container { width: 3.75rem; }
+        .text-container .title { font-size: 1.6rem; }
+        .view-btn { margin-top: 1.5rem; }
+    }
+}

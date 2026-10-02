@@ -1,0 +1,53 @@
+.case-study-content-section{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+
+    .overview-section, .challenge-section, .solution-section{
+        
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 2rem;
+
+        .heading{
+            color: var(--lavender);
+            font-size: 2rem;
+        }
+
+        .description{
+            font-size: 1.4rem;
+        }
+    }
+
+    .challenge-section, .solution-section{
+
+        border-top: solid 1px var(--light-gray);
+
+        .list{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .card{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .icon{
+                    color: var(--lavender);
+                }
+
+                .card-text{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+

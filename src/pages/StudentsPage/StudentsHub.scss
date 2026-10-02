@@ -1,0 +1,67 @@
+.student-hub-page { --hub-purple: #742be7; background: #fff; color: #111015; overflow: hidden; padding: clamp(7rem, 12vh, 9rem) clamp(1.5rem, 6vw, 6rem) clamp(4rem, 8vw, 7rem);
+    > section { margin-inline: auto; width: min(100%, 1400px); }
+}
+
+.student-hub-eyebrow { align-items: center; color: var(--hub-purple); display: flex; font-size: clamp(.65rem, .72vw, .78rem); font-weight: 700; gap: .55rem; letter-spacing: .025em;
+    span { background: var(--hub-purple); border-radius: 50%; height: .45rem; width: .45rem; }
+}
+
+.student-hub-hero { background: radial-gradient(circle at 78% 15%, rgba(134, 58, 239, .18), transparent 25%), radial-gradient(circle at 70% 65%, rgba(108, 36, 217, .13), transparent 31%), #fbfaff; border: 1px solid #eee9f5; border-radius: 1.4rem; min-height: 28rem; overflow: hidden; padding: clamp(2rem, 5vw, 5rem); position: relative;
+    &::after { border: 1px solid rgba(116, 43, 231, .2); border-radius: 50%; content: ''; height: 32rem; position: absolute; right: -9rem; top: -9rem; width: 32rem; }
+    h1 { font-size: clamp(2.55rem, 5vw, 5.75rem); letter-spacing: -.065em; line-height: .97; margin-top: 1rem; max-width: 47rem; position: relative; z-index: 1;
+        span { color: var(--hub-purple); display: block; }
+    }
+    > p:not(.student-hub-eyebrow) { color: #57535f; font-size: clamp(.92rem, 1.04vw, 1.15rem); line-height: 1.6; margin-top: 1.45rem; max-width: 38rem; position: relative; z-index: 1; }
+}
+
+.student-hub-scroll { align-items: center; border-bottom: 1px solid #a668f0; color: var(--hub-purple); display: inline-flex; font-size: .9rem; font-weight: 700; gap: .6rem; margin-top: 1.7rem; padding-bottom: .25rem; position: relative; text-decoration: none; z-index: 1;
+    svg { font-size: 1.15rem; transition: transform .2s ease; }
+    &:hover { scale: none; svg { transform: translateX(5px); } }
+}
+
+.student-hub-paths { padding-top: clamp(4.5rem, 8vw, 7.5rem); }
+.student-hub-heading { align-items: end; display: flex; gap: 2rem; justify-content: space-between; margin-bottom: 1.8rem;
+    h2 { font-size: clamp(1.9rem, 2.6vw, 3.1rem); letter-spacing: -.05em; line-height: 1.05; margin-top: .8rem; }
+    > p { color: #595561; font-size: clamp(.84rem, .94vw, 1rem); line-height: 1.5; max-width: 26rem; }
+}
+
+.student-path-cards { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, 1fr); }
+.student-path-card { border-radius: 1.15rem; color: white; min-height: 31rem; overflow: hidden; position: relative; transition: transform .28s ease, box-shadow .28s ease;
+    > img { height: 100%; inset: 0; object-fit: cover; position: absolute; transition: transform .5s ease; width: 100%; }
+    &::after { background: linear-gradient(0deg, rgba(5, 3, 13, .96) 1%, rgba(10, 4, 27, .52) 52%, rgba(10, 4, 28, .05)); content: ''; inset: 0; position: absolute; }
+    &:hover { box-shadow: 0 22px 40px rgba(50, 14, 105, .22); transform: translateY(-7px); > img { transform: scale(1.045); } }
+}
+.student-path-projects > img { object-position: 72% center; }
+.student-path-internship > img { object-position: 60% center; }
+.student-path-content { bottom: 0; padding: clamp(1.5rem, 3vw, 2.7rem); position: absolute; width: 100%; z-index: 1;
+    h3 { font-size: clamp(1.7rem, 2.4vw, 2.8rem); letter-spacing: -.055em; line-height: 1.04; margin-top: 1rem; }
+    > p:not(.student-path-label) { color: #eeeaf4; font-size: clamp(.82rem, .92vw, .98rem); line-height: 1.55; margin-top: .9rem; max-width: 30rem; }
+    a { align-items: center; background: white; border-radius: 999px; color: #6220cc; display: inline-flex; font-size: .82rem; font-weight: 750; gap: .6rem; margin-top: 1.35rem; padding: .78rem 1.1rem; text-decoration: none; transition: transform .2s ease, background .2s ease;
+        svg { font-size: 1.05rem; } &:hover { background: #e8dbff; scale: none; transform: translateX(4px); }
+    }
+}
+.student-path-icon { align-items: center; background: rgba(231, 213, 255, .2); border: 1px solid rgba(234, 218, 255, .36); border-radius: .7rem; display: inline-flex; height: 2.75rem; justify-content: center; width: 2.75rem; svg { font-size: 1.4rem; } }
+.student-path-label { color: #d9b7ff; font-size: .68rem; font-weight: 750; letter-spacing: .05em; margin-top: 1rem; }
+
+.student-hub-features { background: #faf7ff; border-radius: 1rem; display: grid; gap: 1rem; grid-template-columns: repeat(3, 1fr); margin-top: clamp(3.5rem, 6vw, 5.5rem) !important; padding: 1.5rem;
+    article { align-items: center; display: flex; gap: .85rem; }
+    article > span { align-items: center; background: #eee2ff; border-radius: .65rem; color: var(--hub-purple); display: inline-flex; flex: none; height: 2.7rem; justify-content: center; width: 2.7rem; svg { font-size: 1.3rem; } }
+    h3 { font-size: clamp(.8rem, .9vw, .96rem); } p { color: #625e6a; font-size: clamp(.67rem, .74vw, .8rem); margin-top: .25rem; }
+}
+
+.student-hub-cta { align-items: center; background: #0b0712; border-radius: 1rem; color: white; display: flex; gap: 1.3rem; justify-content: space-between; margin-top: 1.25rem !important; overflow: hidden; padding: 1.65rem 2rem; position: relative;
+    &::before { background: radial-gradient(circle, rgba(119, 44, 234, .68), transparent 65%); content: ''; height: 18rem; position: absolute; right: 12%; top: -11rem; width: 30rem; }
+    > svg { color: #b575ff; font-size: 2rem; position: relative; z-index: 1; }
+    div { flex: 1; position: relative; z-index: 1; } p { color: #bd8cff; font-size: .64rem; font-weight: 700; letter-spacing: .04em; } h2 { font-size: clamp(1.25rem, 1.65vw, 1.8rem); letter-spacing: -.04em; margin-top: .35rem; }
+    a { align-items: center; background: #7528e8; border-radius: 999px; color: white; display: inline-flex; font-size: .8rem; font-weight: 700; gap: .5rem; padding: .75rem 1rem; position: relative; text-decoration: none; z-index: 1; &:hover { scale: 1.03; } svg { font-size: 1rem; } }
+}
+
+@media (max-width: 720px) {
+    .student-hub-page { padding: 6.7rem 1.25rem 3rem; }
+    .student-hub-hero { min-height: 27rem; padding: 2rem 1.5rem; }
+    .student-hub-heading { align-items: start; flex-direction: column; gap: .9rem; }
+    .student-path-cards, .student-hub-features { grid-template-columns: 1fr; }
+    .student-path-card { min-height: 29rem; }
+    .student-hub-features { gap: 1.1rem; padding: 1.25rem; }
+    .student-hub-cta { align-items: start; flex-wrap: wrap; padding: 1.4rem; > svg { display: none; } div { flex-basis: 100%; } }
+}

@@ -1,0 +1,78 @@
+.projects-hero-section{
+    height: 90vh;
+    background: url(../../../assets/images/projects-hero-bg.webp);
+    background-size: cover;
+    background-position: end;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    .section-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: white;
+
+        .main-text {
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1.5;
+
+            span {
+                color: var(--purple);
+            }
+        }
+
+        .mobile-image{
+            display: none;
+        }
+
+        .sub-text {
+            font-size: 1.6rem;
+            line-height: 2;
+            width: 75%;
+        }
+
+        .scroll-to-explore {
+            display: flex;
+            align-items: center;
+            color: var(--purple);
+            font-size: 1rem;
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .projects-hero-section{
+        background: black;
+        height: auto;
+
+        .section-content{
+        gap: 1rem;
+        padding-top: 10vh;
+        width: 100%;
+            .main-text{
+                font-size: 2.4rem;
+                line-height: 1.2;
+            }
+
+            .sub-text{
+                width: 100%;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+
+            .mobile-image{
+                display: block;
+            }
+
+            .scroll-to-explore{
+                font-size: 0.8rem;
+            }
+        }
+
+    }
+}

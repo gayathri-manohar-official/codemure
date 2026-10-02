@@ -1,0 +1,57 @@
+.legal-hero{
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    .section-content {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: white;
+
+        .main-text {
+            font-size: 3rem;
+            font-weight: bold;
+
+            span {
+                color: var(--purple);
+            }
+        }
+
+        .sub-text {
+            font-size: 1.3rem;
+            width: 55%;
+        }
+
+        img{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .legal-hero{
+        background: black;
+        height: auto;
+        .section-content{
+            width: 100%;
+            gap: 1rem;
+            .main-text{
+                font-size: 2.3rem;
+            }
+
+            .sub-text{
+                width: 100%;
+                font-size: 1.2rem;
+            }
+
+            img{
+                display: block;
+            }
+        }
+    }
+}

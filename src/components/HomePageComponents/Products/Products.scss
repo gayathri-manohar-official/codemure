@@ -1,0 +1,132 @@
+.products-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 16vh !important;
+
+    .product-gallery {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(3, 1fr);
+        height: 700px;
+        gap: 1rem;
+    }
+
+
+    .amara {
+        grid-column: 1;
+        grid-row: 1;
+        background: url('../../../assets/images/product-amara.webp');
+    }
+
+    .melt-and-made {
+        grid-column: 1;
+        grid-row: 2;
+        background: url('../../../assets/images/product-meltandmade.webp');
+    }
+
+    .zelorah {
+        grid-column: 1;
+        grid-row: 3;
+        background: url('../../../assets/images/product-zelorah.webp');
+    }
+
+    .ntrl {
+        grid-column: 2;
+        grid-row: span 3;
+        background: url('../../../assets/images/product-ntrl.webp');
+    }
+
+    .product-image {
+        position: relative;
+        border-radius: 1rem;
+        background-size: cover;
+        background-position: top;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        .product-overlay {
+            position: absolute;
+            inset: 0; //this is the shorthand for top:0, bottom:0, left:0 and right:0
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 1rem;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+
+            h2 {
+                color: white;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .product-image:hover {
+        scale: 102%;
+
+        .product-overlay {
+            opacity: 1;
+        }
+    }
+
+
+
+    .view-products-btn {
+        width: 18%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+        background-color: var(--purple);
+        color: white;
+        text-decoration: none;
+        box-shadow: 4px 4px 16px var(--shadow-gray);
+        transition: all 0.1s ease-in;
+
+        &:hover {
+            background-color: black;
+            color: var(--lavender);
+            cursor: pointer;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .products-section {
+        .product-gallery {
+            display: flex;
+            overflow-x: scroll;
+            height: 20vh !important;
+
+            .product-image {
+                width: 75vw !important;
+                aspect-ratio: 2/1 !important;
+                height: 100% !important;
+
+                &:hover {
+                    scale: 100%;
+
+                    .product-overlay {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .view-products-btn {
+            width: 60%;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+    }
+
+}

@@ -1,0 +1,92 @@
+.contact-card {
+    color: white;
+
+    .card-wrapper {
+        background-color: #16104B;
+        border-radius: 1rem;
+        padding: 2.5rem 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .icon-container {
+            background-color: #21175D;
+            height: 80px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0px 0px 6px var(--blackish-blue);
+
+            .icon {
+                font-size: 40px;
+            }
+        }
+
+        .card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .main-text {
+                font-size: 1.7rem;
+            }
+
+            .sub-text {
+                font-size: 1.3rem;
+                color: var(--lavender);
+            }
+        }
+
+        .primary-btn {
+            font-size: 1.3rem;
+            padding: 1rem 1.5rem;
+            background-color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--purple);
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0px 0px 16px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .contact-card {
+    .card-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+
+        .card-content {
+            flex-direction: column;
+
+            .card-text {
+                .main-text {
+                    font-size: 1.4rem;
+                }
+
+                .sub-text {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .primary-btn {
+            width: 100%;
+            justify-content: space-between;
+            font-size: 1.2rem;
+        }
+    }
+}
+}

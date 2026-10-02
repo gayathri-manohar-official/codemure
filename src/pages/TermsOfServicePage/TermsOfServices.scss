@@ -1,0 +1,13 @@
+.terms-of-services-page{
+    padding-top: 10vh;
+}
+
+.terms-of-services-page section{
+    padding: 2rem 4.5rem;
+}
+
+@media (max-width: 768px){
+    .terms-of-services-page section{
+        padding: 1.5rem 2.5rem;
+    }
+}

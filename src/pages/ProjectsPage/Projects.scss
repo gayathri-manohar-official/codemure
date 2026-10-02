@@ -1,0 +1,13 @@
+.projects-page section{
+    padding: 2rem 4.5rem;
+}
+.projects-page{
+    background-color: var(--blackish-blue);
+}
+
+
+@media (max-width: 768px){
+    .projects-page section{
+        padding: 1.5rem 2.5rem;
+    }
+}

@@ -1,0 +1,160 @@
+.home-hero-section {
+    height: 100vh;
+    background: url(../../../assets/images/home.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+
+
+    .hero-content {
+        color: white;
+        max-width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 2rem;
+
+        .tagline {
+            color: var(--lavender);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .white-tagline {
+            color: white;
+        }
+
+        .toggle-on,
+        .toggle-off {
+            cursor: pointer;
+        }
+
+        .main-text {
+            font-size: 4rem;
+            line-height: 1;
+            font-weight: bold;
+
+            span {
+                color: var(--lavender);
+            }
+        }
+
+        .sub-text {
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .phone-image-container{
+            display: none;
+        }
+
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .explore-btn,
+            .start-project-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                border-radius: 30px;
+                padding: 1rem 1.3rem;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    font-size: 1.5rem;
+                    color: white;
+                }
+            }
+
+            .explore-btn {
+                background-color: var(--lavender);
+            }
+
+            .start-project-btn {
+                background-color: transparent;
+                border: solid 1px var(--purple);
+
+                &:active {
+                    box-shadow: inset 0px 0px 12px white;
+                }
+            }
+        }
+
+        .scroll-to-explore {
+            display: flex;
+            align-items: center;
+            color: var(--purple);
+            font-size: 0.9rem;
+            gap: 10px;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .home-hero-section {
+        background: black;
+        align-items: center;
+        height: auto;
+        
+
+        .hero-content {
+            max-width: 100%;
+            padding-top: 10vh;
+
+            .tagline {
+                font-size: 0.9rem;
+            }
+
+            .main-text {
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+            }
+
+            .sub-text {
+                font-size: 1.1rem;
+            }
+
+            .phone-image-container{
+                display: flex;
+                max-width: 100%;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .button-container {
+
+                flex-direction: column;
+
+                .explore-btn,
+                .start-project-btn {
+
+                    width: 80%;
+
+                    a {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+
+            .scroll-to-explore{
+                font-size: 0.8rem;
+            }
+
+
+        }
+
+    }
+}

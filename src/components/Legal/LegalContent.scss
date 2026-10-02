@@ -1,0 +1,133 @@
+.legal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .last-updated {
+        font-size: 1.2rem;
+    }
+}
+
+.legal-body {
+    display: flex;
+
+    .sidebar {
+        padding: 2rem;
+        border: solid 1px var(--border-gray);
+        border-radius: 1rem;
+        box-shadow: 0px 0px 12px var(--shadow-gray);
+        width: 20%;
+        position: sticky;
+
+        .menu-card {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--gray-font);
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: var(--purple);
+                    cursor: pointer;
+                }
+
+                &.active {
+                    color: var(--purple);
+                }
+            }
+
+
+        }
+    }
+
+    .info-container {
+        flex: 1;
+        max-height: 80vh;
+        overflow-y: scroll;
+
+
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .title-section {
+                width: 100%;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+
+
+                .section-title {
+                    font-size: 1.4rem;
+                }
+
+                .icon-container {
+                    background-color: var(--light-bg);
+                    width: 64px;
+                    aspect-ratio: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+
+                    .icon {
+                        color: var(--purple);
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            .sub-title {
+                width: 90%;
+                p,
+                span,
+                li {
+                    font-size: 1.2rem;
+                    line-height: 1.5;
+                }
+
+                span {
+                    font-weight: bold;
+                }
+
+                ul {
+                    padding-left: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-content {
+        .legal-body {
+            flex-direction: column;
+            gap: 4rem;
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .info-container{
+                max-height: 95vh;
+                width: 100%;
+                padding: 0 !important;
+                border: solid 1px var(--border-gray);
+                border-radius: 1rem;
+
+                .info-section{
+                    padding: 1.5rem;
+
+                }
+            }
+        }
+    }
+}

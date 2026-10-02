@@ -1,0 +1,245 @@
+.footer {
+
+    padding: 2rem 4.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+
+    .footer-main-section {
+        display: flex;
+        justify-content: space-between;
+        border-block: solid 1px var(--border-gray);
+        padding-block: 2rem;
+
+        .brand-info {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .description {
+                font-size: 1.1rem;
+            }
+
+            .codemure-logo {
+                display: flex;
+                align-self: start;
+                height: 64px;
+            }
+
+            .footer-socials {
+                display: flex;
+                gap: 1.5rem;
+
+                a{
+                    color: var(--purple);
+                }
+            }
+        }
+
+        .footer-nav {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+
+
+            .footer-links-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                h2 {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-size: 1.1rem;
+
+                        &:hover {
+                            color: var(--purple);
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-cta {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1.25rem;
+            border: 1px solid var(--border-gray);
+            border-radius: 1rem;
+            background: linear-gradient(145deg, var(--light-bg), rgba(186, 111, 244, 0.2));
+
+            h2 {
+                margin-top: 0.5rem;
+                font-size: 1.35rem;
+                font-weight: bold;
+            }
+
+            p {
+                margin-top: 0.75rem;
+                color: var(--gray-font);
+                font-size: 0.95rem;
+                line-height: 1.55;
+            }
+
+            .eyebrow {
+                margin: 0;
+                color: var(--purple);
+                font-size: 0.7rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+            }
+
+            .footer-cta-button {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.75rem;
+                margin-top: 1.25rem;
+                padding: 0.75rem 1rem;
+                border-radius: 999px;
+                background-color: var(--purple);
+                color: white;
+                font-size: 0.9rem;
+                font-weight: 600;
+                text-decoration: none;
+
+                svg {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .footer-copyright-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            font-size: 1rem;
+        }
+
+        .copyright-section-links {
+            display: flex;
+            gap: 4rem;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    color: var(--purple);
+                }
+            }
+        }
+    }
+
+    &.footer-projects {
+        background-color: var(--blackish-blue);
+        color: white;
+
+        .footer-main-section {
+            border-block: solid 1px var(--light-gray);
+        }
+
+
+        .footer-nav {
+            .footer-links-container {
+                ul {
+                    a {
+                        color: white;
+                    }
+                }
+
+            }
+        }
+
+        .footer-cta {
+            border-color: var(--light-gray);
+            background: linear-gradient(145deg, #1b102c, #2c1648);
+
+            p { color: rgba(255, 255, 255, 0.72); }
+
+            .eyebrow { color: var(--lavender); }
+
+            .footer-cta-button {
+                background-color: var(--lavender);
+                color: var(--blackish-blue);
+            }
+        }
+
+        .footer-copyright-section {
+            .copyright-section-links {
+                a {
+                    color: white;
+
+                    &:hover {
+                        color: var(--purple);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 2.5rem;
+
+        .footer-main-section {
+            padding-top: 0;
+            flex-direction: column;
+            gap: 2rem;
+
+            .brand-info {
+                width: 100%;
+
+                .footer-socials {
+                    gap: 2rem;
+                }
+            }
+
+            .footer-nav {
+                display: none;
+            }
+
+            .footer-cta {
+                width: 100%;
+
+                h4 {
+                    font-size: 1.4rem;
+                }
+            }
+
+        }
+
+        .footer-copyright-section {
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .copyright-section-links {
+                gap: 2rem;
+            }
+        }
+    }
+}

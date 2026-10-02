@@ -1,0 +1,15 @@
+.case-study-page{
+    padding-top: 10vh;
+    background-color: var(--blackish-blue);
+}
+
+.case-study-page section{
+    padding: 2rem 4.5rem;
+    color: white;
+}
+
+@media (max-width: 768px){
+    .case-study-page section{
+        padding: 1.5rem 2.5rem;
+    }
+}

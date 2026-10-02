@@ -1,0 +1,14 @@
+.contact-page {
+    padding-top: 10vh;
+}
+
+.contact-page section {
+    padding: 2rem 4.5rem;
+}
+
+
+@media (max-width: 768px) {
+    .contact-page section {
+        padding: 1.5rem 2.5rem;
+    }
+}
